@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/bill_list_dest">
+
+    <fragment android:id="@+id/bill_list_dest" android:name="com.coolreecedev.spendthrift.BillListFragment"
+              android:label="fragment_item_list" tools:layout="@layout/fragment_item_list"/>
+    <fragment android:id="@+id/detail_dest" android:name="com.coolreecedev.spendthrift.DetailFragment"
+              android:label="fragment_detail" tools:layout="@layout/fragment_detail">
+        <argument android:name="food" app:argType="string" android:defaultValue="BugerKing"/>
+        <argument android:name="spent" app:argType="float" android:defaultValue="0.0"/>
+    </fragment>
+</navigation>
